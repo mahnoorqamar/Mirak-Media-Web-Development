@@ -1,0 +1,34 @@
+// (1.02) variables
+
+// inter google font source
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  // font family
+  --inter: "Inter", sans-serif;
+
+  // theme default
+  --theme-font: var(--inter);
+  --theme-bg: #000000;
+  --theme-color: #ffffff;
+
+  // colors
+  --white: #ffffff;
+  --black: #000000;
+  --primary-color: #6ed9ff;
+  --secondary-color: #ff8fba;
+  --tertiary-color: #0e0e0e;
+  --quaternary-color: #040404;
+  --quinary-color: #c1c1c1;
+  --senary-color: #191919;
+  --septenary-color: #101010;
+  --octonary-color: #1a1a1a;
+  --nonary-color: #d9d9d9;
+
+  // transitions
+  --transition: all 0.3s ease-in-out;
+
+  // box shadow
+  --shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  --shadow-secondary: 0 0 31px rgba(0, 0, 0, 0.1);
+}

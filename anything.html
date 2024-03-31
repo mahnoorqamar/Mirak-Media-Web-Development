@@ -1,0 +1,63 @@
+@startuml
+
+!define ENTITY class
+!define RELATIONSHIP -[hidden]->
+
+ENTITY Users {
+  +UserID
+  Name
+  Email
+}
+
+ENTITY Server {
+  +ServerID
+  // attributes specific to your server entity
+}
+
+ENTITY ExternalServices {
+  +ServiceID
+  // attributes specific to your external services entity
+}
+
+ENTITY HomepageRendering {
+  +RenderingID
+  // attributes specific to your homepage rendering entity
+}
+
+ENTITY ServicesInformationRetrieval {
+  +RetrievalID
+  // attributes specific to your services information retrieval entity
+}
+
+ENTITY PortfolioDisplay {
+  +DisplayID
+  // attributes specific to your portfolio display entity
+}
+
+ENTITY ContactFormSubmission {
+  +SubmissionID
+  // attributes specific to your contact form submission entity
+}
+
+ENTITY DatabaseOperations {
+  +OperationID
+  // attributes specific to your database operations entity
+}
+
+ENTITY MySQLDatabase {
+  +DatabaseID
+  // attributes specific to your MySQL database entity
+}
+
+Users --( Users_Server_Relation )
+Server --( Users_Server_Relation )
+ExternalServices --( ExternalServices_Server_Relation )
+Server --( ExternalServices_Server_Relation )
+Users --( HomepageRendering )
+HomepageRendering --( ServicesInformationRetrieval )
+ServicesInformationRetrieval --( PortfolioDisplay )
+ServicesInformationRetrieval --( ContactFormSubmission )
+ContactFormSubmission --( DatabaseOperations )
+PortfolioDisplay --( UploadedMediaFiles )
+
+@enduml
